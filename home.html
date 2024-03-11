@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+
+    <style>
+        body {
+            background-image: url("D:/rushi-portfolio/assets/images/bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* Optionally, you can add more styles here */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value (last parameter) to set transparency */
+            padding: 20px;
+        }
+
+        /* Optionally, you can style the form and its elements here */
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+text-align: center;
+        }
+
+        input[type="text"] {
+            width: 50%;
+            padding: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="htmlForm">
+            <label for="inputNumber">Enter your JNTU Number:</label>
+            <input type="text" id="inputNumber" name="inputNumber" required>
+            <button type="submit">Personal Portfolio</button>
+		
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("htmlForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get input number from the form
+            var inputNumber = document.getElementById("inputNumber").value;
+
+            // Open HTML file based on input number
+            if (inputNumber === "20341A1226") {
+                window.open("index.html", "_blank");
+            } else if (inputNumber === "20341A1207") {
+                window.open("1207.html", "_blank");
+            } else if (inputNumber === "20341A1212") {
+                window.open("1212.html", "_blank");
+            } else if (inputNumber === "20341A1248") {
+                window.open("1248.html", "_blank");
+            } else if (inputNumber === "20341A0460") {
+                window.open("gowri.html", "_blank");
+            } else if (inputNumber === "20341A04E6") {
+                window.open("ramkalyan.html", "_blank");
+            } else {    
+                alert("Invalid input number. Please enter a valid number.");
+            }
+        });
+    </script>
+</body>
+</html>
